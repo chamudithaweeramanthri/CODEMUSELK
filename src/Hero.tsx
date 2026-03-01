@@ -5,6 +5,7 @@ const Hero = () => {
     <>
       {/* <div className='bg-blue-500 w-screen h-16'>Hero</div> */}
 
+    {/* gradient effect */}
     <div className="flex h-screen w-full">
       <div className="w-1/2 h-full bg-conic-90 from-[#000000] to-[#BF00FF]" />
       <div className="w-1/2 h-full bg-conic-270 from-[#BF00FF] to-[#000000]" />

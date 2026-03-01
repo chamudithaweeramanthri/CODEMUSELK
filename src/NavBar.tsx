@@ -3,14 +3,14 @@ import logo from "./assets/Logo.png";
 
 const Navbar: React.FC = () => {
   return (
-    <nav className="fixed w-full flex items-center justify-between px-8 py-4">
+    <nav className="fixed w-full flex items-center justify-between px-70 py-4 abeezee-regular">
       {/* Logo */}
-      <div className="text-2xl font-bold">
-        <img src={logo} alt="CODEMUSE Logo" className="h-8 w-auto" />
+      <div>
+        <img src={logo} alt="CODEMUSE Logo" className="h-[48px] w-[180px]" />
       </div>
 
       {/* Menu Items */}
-      <ul className="flex gap-8 text-white text-lg">
+      <ul className="flex gap-8 text-white text-20px">
         <li className="cursor-pointer hover:text-gray-300 transition">Home</li>
         <li className="cursor-pointer hover:text-gray-300 transition">Services</li>
         <li className="cursor-pointer hover:text-gray-300 transition">Portfolio</li>

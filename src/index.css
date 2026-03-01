@@ -11,3 +11,10 @@
   font-weight: 400;
   font-style: italic;
 }
+
+.afacad-regular {
+  font-family: "Afacad", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}

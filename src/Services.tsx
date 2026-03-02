@@ -2,7 +2,12 @@ import React from 'react'
 
 const Services = () => {
   return (
-    <div className='bg-green-500 w-full h-16'>Services</div>
+    /* Services Section */
+    <>
+      <div className="relative h-screen w-full bg-[#0e0117]  overflow-hidden">
+      <div className="absolute inset-0 w-full h-screen bg-linear-to-b to-[#ae00ff] opacity-60"></div>
+      </div>
+    </>
   )
 }
 

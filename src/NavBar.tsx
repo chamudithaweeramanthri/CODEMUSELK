@@ -3,7 +3,7 @@ import logo from "./assets/Logo.png";
 
 const Navbar: React.FC = () => {
   return (
-    <nav className="fixed z-20 w-full flex items-center justify-between px-60 py-4 abeezee-regular">
+    <nav className="fixed z-20 w-full flex items-center justify-between px-60 py-4 abeezee-regular backdrop-blur-[7px]">
       {/* Logo */}
       <div>
         <img src={logo} alt="CODEMUSE Logo" className="h-[48px] w-[180px]" />

@@ -22,10 +22,10 @@ const Services = () => {
               
               {/* Content */}
               <div className="relative z-10">
-                <h2 className="text-[25px] mb-2 afacad-bold">AI AUTOMATIONS</h2>
+                <h2 className="text-[25px] mb-8 afacad-bold">AI AUTOMATIONS</h2>
 
                 {/* Description */}
-                <h3 className="text-[16px] mb-6 almarai-regular text-center">
+                <h3 className="text-[16px] mb-0 almarai-regular text-center leading-5">
                   Leverage cutting-edge AI to automate workflows, reduce costs, and boost productivity across your business operations.
                 </h3>
 
@@ -71,10 +71,10 @@ const Services = () => {
               
               {/* Content */}
               <div className="relative z-10">
-                <h2 className="text-[25px] mb-2 afacad-bold">WEB DEVELOPMENT</h2>
+                <h2 className="text-[25px] mb-8 afacad-bold">WEB DEVELOPMENT</h2>
 
                 {/* Description */}
-                <h3 className="text-[16px] mb-6 almarai-regular text-center">
+                <h3 className="text-[16px] mb-6 almarai-regular text-center leading-5">
                   Build stunning, responsive websites and web applications that deliver exceptional user experiences.
                 </h3>
 
@@ -120,10 +120,10 @@ const Services = () => {
               
               {/* Content */}
               <div className="relative z-10">
-                <h2 className="text-[25px] mb-2 afacad-bold">SOFTWARE DEVELOPMENT</h2>
+                <h2 className="text-[25px] mb-4 afacad-bold leading-7">SOFTWARE DEVELOPMENT</h2>
 
                 {/* Description */}
-                <h3 className="text-[16px] mb-6 almarai-regular text-center">
+                <h3 className="text-[16px] mb-6 almarai-regular text-center leading-5">
                   Custom software solutions tailored to your unique business needs and challenges.
                 </h3>
 
@@ -169,11 +169,11 @@ const Services = () => {
               
               {/* Content */}
               <div className="relative z-10">
-                <h2 className="text-[25px] mb-2 afacad-bold">WEB DEVELOPMENT</h2>
+                <h2 className="text-[25px] mb-8 afacad-bold">DIGITAL MARKETING</h2>
 
                 {/* Description */}
-                <h3 className="text-[16px] mb-6 almarai-regular text-center">
-                  Build stunning, responsive websites and web applications that deliver exceptional user experiences.
+                <h3 className="text-[16px] mb-7 almarai-regular text-center leading-5">
+                  Grow your brand presence with strategic social media campaigns that engage and convert.
                 </h3>
 
                 {/* Bullet Points */}
@@ -182,27 +182,27 @@ const Services = () => {
                     <span className="w-5 h-5 rounded-full border border-white flex items-center justify-center">
                       ✓
                     </span>
-                    Custom Websites
+                    Content Strategy
                   </li>
 
                   <li className="flex items-center gap-3">
                     <span className="w-5 h-5 rounded-full border border-white flex items-center justify-center">
                       ✓
                     </span>
-                    E-commerce Solutions
+                    Paid Advertising
                   </li>
                   <li className="flex items-center gap-3">
                     <span className="w-5 h-5 rounded-full border border-white flex items-center justify-center">
                       ✓
                     </span>
-                    Web Applications
+                    Analytics & Reports
                   </li>
 
                   <li className="flex items-center gap-3">
                     <span className="w-5 h-5 rounded-full border border-white flex items-center justify-center">
                       ✓
                     </span>
-                    API Development
+                  Brand Development
                   </li>
                 </ul>
               </div>

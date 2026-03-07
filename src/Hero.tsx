@@ -20,7 +20,7 @@ const Hero = () => {
         {/* Hero content */}
         <div className="relative z-10 flex flex-col items-center justify-center h-full text-center text-white bottom-20">
           <h1 className="text-[40px] mt-60 afacad-regular">TRANSFORMING IDEAS INTO DIGITAL REALITY</h1>
-          <p className="text-[18px] mb-12 max-w-xl">
+          <p className="text-[18px] mb-12 max-w-xl almarai-regular">
             We craft innovative software solutions, AI automations, and digital experiences that empower businesses to thrive in the modern world.
           </p>
           

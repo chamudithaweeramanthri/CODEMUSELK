@@ -4,8 +4,9 @@ import { BrowserRouter } from 'react-router-dom'
 import './index.css'
 import NavBar from './NavBar'
 import Hero from './Hero'
+import Projects from './Projects'
 import Services from './Services'
-import Team from './Team'
+import Team from './Projects'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
@@ -13,7 +14,7 @@ createRoot(document.getElementById('root')!).render(
       <NavBar />
       <Hero />
       <Services />
-      <Team />
+      <Projects />
     </BrowserRouter>
   </StrictMode>,
 )

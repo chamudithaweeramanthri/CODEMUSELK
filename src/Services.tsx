@@ -11,7 +11,7 @@ const Services = () => {
           <p className="text-[23px] mb-12 almarai-regular">
             Comprehensive digital solutions to help your business grow and succeed in the <br /> modern digital landscape.
           </p>
-          <div className="flex flex-col md:flex-row items-center justify-center gap-6">
+          <div className="flex flex-col md:flex-row items-center justify-center gap-6 hover:gap-8 cursor-zoom-in transition-all">
             {/* Container 1 */}
             <div className="relative w-[287px] h-[438px] rounded-3xl overflow-hidden bg-[#0b0020] p-1 text-white">
 
@@ -208,13 +208,9 @@ const Services = () => {
               </div>
             </div>
           </div>
-
-
         </div>
       </div>
-
     </>
   )
 }
-
 export default Services

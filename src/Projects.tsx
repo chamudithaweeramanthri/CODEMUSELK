@@ -52,12 +52,12 @@ const Projects = () => {
     <>
       <div className="relative h-screen w-full bg-[#1f0130]  overflow-hidden">
         <div className="absolute inset-0 w-full h-screen bg-linear-to-b from-[#ae00ff] opacity-30"></div>
-        <div className="relative z-10 flex flex-col items-center justify-center h-full text-center text-white">
+        <div className="relative z-10 mt-1 flex flex-col items-center justify-center h-full text-center text-white">
           <h2 className="text-[50px] afacad-bold">Our Work</h2>
-          <p className="text-[23px] mb-12 almarai-regular">
+          <p className="text-[23px] mb-10 almarai-regular">
             A showcase of our recent projects, demonstrating our expertise in crafting <br/> innovative digital solutions that drive results.
           </p>
-          <div className="flex flex-wrap justify-center gap-8 ">
+          <div className="flex flex-wrap justify-center gap-7 ">
             {projects.map((project) => (
               <a key={project.id} href={project.projectUrl} target="_blank" rel="noopener noreferrer" className="relative w-[300px] h-[280px] overflow-hidden bg-[#000000] rounded-br-[20px] rounded-bl-[20px] rounded-tr-[15px] rounded-tl-[15px]">
                 <img src={project.imageUrl} alt={project.name} className="w-full h-[160px] object-cover" />

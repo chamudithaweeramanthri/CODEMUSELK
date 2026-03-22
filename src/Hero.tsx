@@ -1,6 +1,6 @@
 const Hero = () => {
   return (
-    <div className="relative h-screen w-full overflow-hidden">
+    <div id="home" className="relative h-screen w-full overflow-hidden scroll-mt-24">
       {/* <div className='bg-blue-500 w-screen h-16'>Hero</div> */}
       
       

@@ -1,7 +1,7 @@
 const ContactUs = () => {
   return (
     <>
-      <div className="relative min-h-screen w-full bg-[#1f0130]">
+            <div id="contact" className="relative min-h-screen w-full bg-[#1f0130] scroll-mt-24">
         <div className="absolute inset-0 w-full h-full bg-linear-to-b to-[#ae00ff] opacity-30"></div>
         <div className="relative z-10  flex flex-col items-center justify-center min-h-screen py-16 text-center text-white">
             <h2 className="relative text-[50px] -mt-10 afacad-bold">Contact Us</h2>

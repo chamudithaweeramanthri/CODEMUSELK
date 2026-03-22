@@ -50,7 +50,7 @@ const Projects = () => {
 
   return (
     <>
-      <div className="relative h-screen w-full bg-[#1f0130]  overflow-hidden">
+      <div id="projects" className="relative h-screen w-full bg-[#1f0130]  overflow-hidden scroll-mt-24">
         <div className="absolute inset-0 w-full h-screen bg-linear-to-b from-[#ae00ff] opacity-30"></div>
         <div className="relative z-10 mt-1 flex flex-col items-center justify-center h-full text-center text-white">
           <h2 className="text-[50px] afacad-bold">Our Work</h2>

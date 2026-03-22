@@ -4,7 +4,7 @@ const Services = () => {
   return (
     /* Services Section */
     <>
-      <div className="relative h-screen w-full bg-[#1f0130]  overflow-hidden">
+      <div id="services" className="relative h-screen w-full bg-[#1f0130]  overflow-hidden scroll-mt-24">
         <div className="absolute inset-0 w-full h-screen bg-linear-to-b to-[#ae00ff] opacity-30"></div>
         <div className='relative top-15 flex flex-col h-full text-center text-white'>
           <h1 className="text-[50px] afacad-bold">What We Offer</h1>

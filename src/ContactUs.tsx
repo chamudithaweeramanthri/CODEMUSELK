@@ -44,7 +44,7 @@ const ContactUs = () => {
             </div>
             {/* Contact us form */}
             <div className="relative w-[1000px] h-[600px] overflow-hidden bg-[#000000] mt-8  opacity-90 p-8 rounded-[20px]">
-                <h2 className="text-[20px] afacad-bold text-left mb-4">Send us a message</h2>
+                <h2 className="text-[25px] afacad-bold text-center mb-4">Send us a message</h2>
                 <form className="flex flex-col gap-4">
                     <div className="flex flex-row gap-4">
                         <input type="text" placeholder="Your Name" className="p-3 rounded-[10px] bg-[#1f0130] text-white focus:outline-none w-full" />

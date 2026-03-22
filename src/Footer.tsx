@@ -21,6 +21,20 @@ const Footer = () => {
               <a href="#" className='hover:text-gray-400 transition'>Contact Us</a>
             </div>
 
+            {/* social media icons */}
+            <div className='relative flex flex-col gap-5 top-5'>
+              <a href="#" className='hover:text-gray-400 transition'>
+                <img src="https://img.icons8.com/?size=100&id=13930&format=png&color=000000" alt="LinkedIn" className='w-8 h-' />
+              </a>
+              <a href="#" className='hover:text-gray-400 transition'>
+                <img src="https://img.icons8.com/?size=100&id=uLWV5A9vXIPu&format=png&color=000000" alt="Facebook" className='w-8 h-' />
+              </a>
+
+              <a href="#" className='hover:text-gray-400 transition'>
+                <img src="https://img.icons8.com/?size=100&id=ZRiAFreol5mE&format=png&color=000000" alt="Instagram" className='w-8 h-' />
+              </a>
+              
+            </div>
             
 
         </div>

@@ -1,10 +1,41 @@
+import { useRef } from 'react'
+import emailjs from '@emailjs/browser';
+
 const ContactUs = () => {
-    
     // import all api keys from .env file
     const ServiceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
     const TemplateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
     const PublicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
+
+    const form = useRef<HTMLFormElement>(null);
+
+    const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+
+        if (!ServiceId || !TemplateId || !PublicKey) {
+            alert("Email service is not configured. Please check your .env values.");
+            return;
+        }
+
+        if (form.current) {
+            emailjs.sendForm(
+                ServiceId,
+                TemplateId,
+                form.current,
+                {
+                    publicKey: PublicKey,
+                }
+            ).then((result) => {
+                console.log(result.text);
+                alert("Message sent successfully!");
+                form.current?.reset();
+            }).catch((error) => {
+                console.error(error);
+                alert("Failed to send message.");
+            });
+        }
+    };
 
   return (
     <>
@@ -52,12 +83,13 @@ const ContactUs = () => {
             {/* Contact us form */}
             <div className="relative w-[1000px] h-[600px] overflow-hidden bg-[#000000] mt-8  opacity-90 p-8 rounded-[20px]">
                 <h2 className="text-[25px] afacad-bold text-center mb-4">Send us a message</h2>
-                <form className="flex flex-col gap-4">
+                <form className="flex flex-col gap-4" ref={form} onSubmit={sendEmail}>
                     <div className="flex flex-row gap-4">
-                        <input type="text" placeholder="Your Name" className="p-3 rounded-[10px] bg-[#1f0130] text-white focus:outline-none w-full" />
-                        <input type="email" placeholder="Your Email" className="p-3 rounded-[10px] bg-[#1f0130] text-white focus:outline-none w-full" />
+                        <input type="text" required placeholder="Your Name" name="user_name" className="p-3 rounded-[10px] bg-[#1f0130] text-white focus:outline-none w-full" />
+                        <input type="email" required placeholder="Your Email" name="user_email" className="p-3 rounded-[10px] bg-[#1f0130] text-white focus:outline-none w-full"/>
+                        <input type="text" required placeholder="Subject" name="user_subject" className="p-3 rounded-[10px] bg-[#1f0130] text-white focus:outline-none w-full"/>
                     </div>
-                    <textarea placeholder="Your Message" className="p-3 rounded-[10px] bg-[#1f0130] text-white focus:outline-none" rows={10}></textarea>
+                    <textarea name="message" required placeholder="Your Message" className="p-3 rounded-[10px] bg-[#1f0130] text-white focus:outline-none" rows={10}></textarea>
                     <button type="submit" className="bg-[#ae00ff] text-white py-3 rounded-[10px] hover:bg-[#8a00cc] transition-colors">
                         Send Message
                     </button>

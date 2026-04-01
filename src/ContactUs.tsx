@@ -1,4 +1,11 @@
 const ContactUs = () => {
+    
+    // import all api keys from .env file
+    const ServiceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+    const TemplateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+    const PublicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+
+
   return (
     <>
             <div id="contact" className="relative min-h-screen w-full bg-[#1f0130] scroll-mt-24">

@@ -1,6 +1,3 @@
-import React from 'react'
-
-
 const Projects = () => {
       interface Project {
         id: number;
@@ -50,23 +47,29 @@ const Projects = () => {
 
   return (
     <>
-      <div id="projects" className="relative h-screen w-full bg-[#1f0130]  overflow-hidden scroll-mt-24">
-        <div className="absolute inset-0 w-full h-screen bg-linear-to-b from-[#ae00ff] opacity-30"></div>
-        <div className="relative z-10 mt-1 flex flex-col items-center justify-center h-full text-center text-white">
-          <h2 className="text-[50px] afacad-bold">Our Work</h2>
-          <p className="text-[23px] mb-10 almarai-regular">
-            A showcase of our recent projects, demonstrating our expertise in crafting <br/> innovative digital solutions that drive results.
+      <div id="projects" className="relative min-h-screen w-full bg-[#1f0130] overflow-hidden scroll-mt-24 py-16 sm:py-20 lg:py-24">
+        <div className="absolute inset-0 h-full w-full bg-linear-to-b from-[#ae00ff] opacity-30"></div>
+        <div className="relative z-10 mx-auto flex w-full max-w-7xl flex-col items-center px-4 text-center text-white sm:px-6 lg:px-8">
+          <h2 className="text-4xl afacad-bold sm:text-5xl lg:text-6xl">Our Work</h2>
+          <p className="mb-8 mt-2 max-w-4xl text-base leading-relaxed almarai-regular sm:mb-12 sm:text-lg lg:text-2xl">
+            A showcase of our recent projects, demonstrating our expertise in crafting innovative digital solutions that drive results.
           </p>
-          <div className="flex flex-wrap justify-center gap-7 ">
+          <div className="grid w-full grid-cols-1 gap-5 sm:grid-cols-2 sm:gap-6 xl:grid-cols-4 xl:gap-7">
             {projects.map((project) => (
-              <a key={project.id} href={project.projectUrl} target="_blank" rel="noopener noreferrer" className="relative w-[300px] h-[280px] overflow-hidden bg-[#000000] rounded-br-[20px] rounded-bl-[20px] rounded-tr-[15px] rounded-tl-[15px]">
-                <img src={project.imageUrl} alt={project.name} className="w-full h-[160px] object-cover" />
-                <div className=''>
-                  <h3 className="text-xl font-bold mb-1 text-left px-2">{project.name}</h3>
-                  <p className="text-sm almarai-regular text-left px-2">{project.description}</p>
-                  <div className="flex flex-wrap gap-2 px-2">
+              <a
+                key={project.id}
+                href={project.projectUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="relative mx-auto w-full max-w-90 overflow-hidden rounded-br-[20px] rounded-bl-[20px] rounded-tr-[15px] rounded-tl-[15px] bg-[#000000]"
+              >
+                <img src={project.imageUrl} alt={project.name} className="h-42.5 w-full object-cover sm:h-45" />
+                <div className="flex flex-col p-3 sm:p-4">
+                  <h3 className="mb-1 text-left text-lg font-bold sm:text-xl">{project.name}</h3>
+                  <p className="text-left text-sm leading-relaxed almarai-regular sm:text-[15px]">{project.description}</p>
+                  <div className="mt-3 flex flex-wrap gap-2">
                     {project.tags.map((tag, index) => (
-                      <span key={index} className="text-xs  bg-[#1ab165] text-white px-2 py-1 mt-3 rounded-[5px]"> 
+                      <span key={index} className="rounded-[5px] bg-[#1ab165] px-2 py-1 text-xs text-white">
                         {tag}
                       </span>
                     ))}

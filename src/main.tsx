@@ -15,7 +15,7 @@ createRoot(document.getElementById('root')!).render(
       <NavBar />
       <Hero />
       <Services />
-      {/* <Projects /> */}
+      <Projects />
       {/* <Contactus /> */}
       {/* <Footer /> */}
     </BrowserRouter>

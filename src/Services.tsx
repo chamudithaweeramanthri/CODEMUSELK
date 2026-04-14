@@ -52,7 +52,7 @@ const Services = () => {
   
   const renderServiceCard = ({ title, description, points, color }) => {
     return (
-      <div className="relative w-[287px] h-[438px] rounded-3xl overflow-hidden bg-[#0b0020] p-1 text-white">
+      <div className="relative w-full max-w-[287px] min-h-[438px] rounded-3xl overflow-hidden bg-[#0b0020] p-1 text-white">
         
         {/* Gradient Circles */}
         <div
@@ -90,13 +90,13 @@ const Services = () => {
   return (
     <div
       id="services"
-      className="relative h-screen w-full bg-[#1f0130] overflow-hidden scroll-mt-24"
+      className="relative min-h-screen w-full bg-[#1f0130] overflow-hidden scroll-mt-24"
     >
       {/* Background Gradient */}
-      <div className="absolute inset-0 w-full h-screen bg-linear-to-b to-[#ae00ff] opacity-30"></div>
+      <div className="absolute inset-0 w-full h-full bg-linear-to-b to-[#ae00ff] opacity-30"></div>
 
       {/* Content */}
-      <div className="relative top-15 h-full flex flex-col text-center text-white">
+      <div className="relative h-full flex flex-col text-center text-white py-16 px-4 md:px-8">
         <h1 className="text-[30px] sm:text-[35px] md:text-[40px] lg:text-[45px] afacad-bold">
           What We Offer
         </h1>
@@ -107,9 +107,9 @@ const Services = () => {
         </p>
 
         {/* Cards */}
-        <div className="flex flex-col md:flex-row items-center justify-center gap-6 hover:gap-8 cursor-zoom-in transition-all">
+        <div className="mx-auto grid w-full max-w-7xl grid-cols-1 justify-items-center gap-6 sm:grid-cols-2 xl:grid-cols-4">
           {services.map((service, index) => (
-            <div key={index}>
+            <div key={index} className="w-full flex justify-center">
               {renderServiceCard(service)}
             </div>
           ))}

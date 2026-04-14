@@ -107,7 +107,7 @@ const Services = () => {
         </p>
 
         {/* Cards */}
-        <div className="mx-auto grid w-full max-w-7xl grid-cols-1 justify-items-center gap-6 sm:grid-cols-2 xl:grid-cols-4">
+        <div className="mx-auto grid w-full max-w-7xl grid-cols-1 justify-items-center gap-6 sm:grid-cols-2 xl:grid-cols-4  hover:gap-10 duration-200">
           {services.map((service, index) => (
             <div key={index} className="w-full flex justify-center">
               {renderServiceCard(service)}

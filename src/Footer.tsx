@@ -1,55 +1,53 @@
-import React from 'react'
 import logo from "./assets/Logo.png";
 
 const Footer = () => {
   return (
-    <div className='w-full h-80 bg-[#000000] opacity-98 flex items-center justify-center text-white text-sm almarai-regular'>
-      <div className='flex flex-col items-center '>
-        <div className="flex flex-row gap-10 text-[18px] align-right left-10">
-            {/* Logo */}
-            <div className='absolute left-10 '>
-            <img src={logo} alt="CODEMUSE Logo" className="h-16 w-55" />
-            <p className='text-[15px] -mt-2 .abeezee-regular'>Building smart digital solutions <br/> that drive growth, efficiency, and success. </p>
-            {/* Socialmedia icons */}
-            <div className='flex gap-4 mt-4'>
-              <a href="#" className='hover:text-gray-400 transition'>
-                <img src="https://img.icons8.com/?size=100&id=13930&format=png&color=000000" alt="LinkedIn" className='w-8 h-8' />
-              </a>
-              <a href="#" className='hover:text-gray-400 transition'>
-                <img src="https://img.icons8.com/?size=100&id=uLWV5A9vXIPu&format=png&color=000000" alt="Facebook" className='w-8 h-8' />
-              </a>
-              <a href="#" className='hover:text-gray-400 transition'>
-                <img src="https://img.icons8.com/?size=100&id=ZRiAFreol5mE&format=png&color=000000" alt="Instagram" className='w-8 h-8' />
-              </a>
-            </div>
+    <footer className='w-full bg-black text-white text-sm almarai-regular'>
+      <div className='mx-auto max-w-7xl px-6 py-10 sm:px-8 sm:py-12 lg:px-12'>
+        <div className='flex flex-col gap-10 lg:flex-row lg:items-start lg:justify-between'>
+          <div className='max-w-md'>
+            <img src={logo} alt="CODEMUSE Logo" className='h-14 w-auto sm:h-16' />
+            <p className='mt-2 text-sm leading-relaxed sm:text-[15px]'>
+              Building smart digital solutions
+              <br />
+              that drive growth, efficiency, and success.
+            </p>
 
+            <div className='mt-5 flex items-center gap-4'>
+              <a href="#" className='transition hover:opacity-80'>
+                <img src="https://img.icons8.com/?size=100&id=13930&format=png&color=000000" alt="LinkedIn" className='h-8 w-8' />
+              </a>
+              <a href="#" className='transition hover:opacity-80'>
+                <img src="https://img.icons8.com/?size=100&id=uLWV5A9vXIPu&format=png&color=000000" alt="Facebook" className='h-8 w-8' />
+              </a>
+              <a href="#" className='transition hover:opacity-80'>
+                <img src="https://img.icons8.com/?size=100&id=ZRiAFreol5mE&format=png&color=000000" alt="Instagram" className='h-8 w-8' />
+              </a>
             </div>
-
-          <div className='relative flex flex-row gap-10 left-100'>
-            <div className='relative flex flex-col gap-5 top-5'>
-              <a href="#" className='hover:text-gray-400 transition'>Home</a>
-              <a href="#" className='hover:text-gray-400 transition'>Services</a>
-              <a href="#" className='hover:text-gray-400 transition'>Projects</a>
-            </div>
-            <div className='relative flex flex-col gap-5 top-5'>
-              <a href="#" className='hover:text-gray-400 transition'>Clients</a>
-              <a href="#" className='hover:text-gray-400 transition'>Contact Us</a>
-            </div>  
           </div>
 
+          <div className='grid grid-cols-1 gap-4 text-base sm:grid-cols-2 sm:gap-8 lg:pt-2'>
+            <div className='flex flex-col gap-3'>
+              <a href="#" className='transition hover:text-gray-400'>Home</a>
+              <a href="#" className='transition hover:text-gray-400'>Services</a>
+              <a href="#" className='transition hover:text-gray-400'>Projects</a>
+            </div>
+            <div className='flex flex-col gap-3'>
+              <a href="#" className='transition hover:text-gray-400'>Clients</a>
+              <a href="#" className='transition hover:text-gray-400'>Contact Us</a>
+            </div>
+          </div>
         </div>
 
-
-        <div className='relative mt-30 flex flex-col items-center gap-3'>
+        <div className='mt-10 flex flex-col gap-3 border-t border-white/15 pt-6 text-center text-xs sm:mt-12 sm:flex-row sm:items-center sm:justify-between sm:text-sm'>
           <p>© 2026 CODEMUSELK. All rights reserved.</p>
-          <div className='flex gap-6'>
-            <a href="#" className='hover:text-gray-400 transition'>Privacy Policy</a>
-            <a href="#" className='hover:text-gray-400 transition'>Terms of Service</a>
+          <div className='flex items-center justify-center gap-6'>
+            <a href="#" className='transition hover:text-gray-400'>Privacy Policy</a>
+            <a href="#" className='transition hover:text-gray-400'>Terms of Service</a>
           </div>
         </div>
       </div>
-
-    </div>
+    </footer>
   )
 }
 

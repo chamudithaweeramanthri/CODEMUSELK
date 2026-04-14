@@ -17,7 +17,7 @@ createRoot(document.getElementById('root')!).render(
       <Services />
       <Projects />
       <Contactus />
-      {/* <Footer /> */}
+      <Footer />
     </BrowserRouter>
   </StrictMode>,
 )

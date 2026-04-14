@@ -19,8 +19,8 @@ const Hero = () => {
 
         {/* Hero content */}
         <div className="relative z-10 flex flex-col items-center justify-center h-full text-center text-white bottom-35 sm:bottom-40 md:top-10">
-          <h1 className="text-[20px] mt-80 leading-5 sm:text-[30px] md:text-[32px] lg:text-[40px] sm:mt-100 md:mt-1 sm:leading-8 md:leading-10 afacad-regular">TRANSFORMING IDEAS INTO DIGITAL REALITY</h1>
-          <p className="text-[11px] mt-3 sm:text-[13px] md:text-[15px] lg:text-[18px] sm:mt-2 max-w-xl almarai-regular">
+          <h1 className="text-[23px] mt-80 leading-6 sm:text-[30px] md:text-[32px] lg:text-[40px] sm:mt-100 md:mt-1 sm:leading-8 md:leading-10 afacad-regular">TRANSFORMING IDEAS INTO DIGITAL REALITY</h1>
+          <p className="text-[13px] mt-3 sm:text-[13px] md:text-[15px] lg:text-[18px] sm:mt-2 max-w-xl almarai-regular">
             We craft innovative software solutions, AI automations, and digital experiences that empower businesses to thrive in the modern world.
           </p>
           

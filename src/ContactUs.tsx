@@ -41,15 +41,15 @@ const ContactUs = () => {
     <>
             <div id="contact" className="relative min-h-screen w-full bg-[#1f0130] scroll-mt-24">
         <div className="absolute inset-0 w-full h-full bg-linear-to-b to-[#ae00ff] opacity-30"></div>
-        <div className="relative z-10  flex flex-col items-center justify-center min-h-screen py-16 text-center text-white">
-            <h2 className="relative text-[50px] -mt-10 afacad-bold">Contact Us</h2>
-            <p className="text-[23px] mb-12 almarai-regular items-center justify-center">
+        <div className="relative z-10 flex min-h-screen flex-col items-center justify-center px-4 py-16 text-center text-white sm:px-6 lg:px-8">
+            <h2 className="relative -mt-4 text-4xl afacad-bold sm:-mt-8 sm:text-5xl">Contact Us</h2>
+            <p className="mb-10 max-w-3xl text-base almarai-regular sm:mb-12 sm:text-lg lg:text-2xl">
               Have a project in mind? We'd love to hear from you.<br/> Send us a message and we'll respond as soon as possible.
             </p>
             {/* location , email , phone cards */}
-            <div className="flex flex-row gap-5 justify-center">
+            <div className="flex w-full max-w-6xl flex-col items-center justify-center gap-5 md:flex-row md:flex-wrap">
                 {/* Location Card */}
-                <div className="relative w-[320px] h-[200px] overflow-hidden bg-[#000000] opacity-90 rounded-[20px] p-8">
+                <div className="relative h-50 w-full max-w-[320px] overflow-hidden rounded-[20px] bg-[#000000] p-8 opacity-90">
                     {/* location icon */}
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-12 h-12 text-[#ffffff] mx-auto mb-4">
                         <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
@@ -60,10 +60,10 @@ const ContactUs = () => {
                 </div>
             
                 {/* Phone Card */}
-                <div className="relative w-[320px] h-[200px] overflow-hidden bg-[#000000]  opacity-90 rounded-[20px] p-8">
+                <div className="relative h-50 w-full max-w-[320px] overflow-hidden rounded-[20px] bg-[#000000] p-8 opacity-90">
                     {/* location icon */}
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="w-12 h-12 text-[#ffffff] mx-auto mb-4">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 1.5H8.25A2.25 2.25 0 0 0 6 3.75v16.5a2.25 2.25 0 0 0 2.25 2.25h7.5A2.25 2.25 0 0 0 18 20.25V3.75a2.25 2.25 0 0 0-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3" />
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="mx-auto mb-4 h-12 w-12 text-[#ffffff]">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 1.5H8.25A2.25 2.25 0 0 0 6 3.75v16.5a2.25 2.25 0 0 0 2.25 2.25h7.5A2.25 2.25 0 0 0 18 20.25V3.75a2.25 2.25 0 0 0-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3" />
                     </svg>
 
                     <h2 className="text-[20px] afacad-bold text-center ">+94 77 123 4567</h2>
@@ -71,26 +71,26 @@ const ContactUs = () => {
                 </div>
 
                 {/* Email Card*/}
-                <div className="relative w-[320px] h-[200px] overflow-hidden bg-[#000000]  opacity-90 rounded-[20px] p-8">
+                <div className="relative h-50 w-full max-w-[320px] overflow-hidden rounded-[20px] bg-[#000000] p-8 opacity-90">
                     {/* email icon */}
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="w-12 h-12 text-[#ffffff] mx-auto mb-4">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="mx-auto mb-4 h-12 w-12 text-[#ffffff]">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
                     </svg>
                     <h2 className="text-[20px] afacad-bold text-center ">contact@codemuselk.com</h2>
                     
                 </div>
             </div>
             {/* Contact us form */}
-            <div className="relative w-[1000px] h-[600px] overflow-hidden bg-[#000000] mt-8  opacity-90 p-8 rounded-[20px]">
-                <h2 className="text-[25px] afacad-bold text-center mb-4">Send us a message</h2>
+            <div className="relative mt-8 w-full max-w-5xl overflow-hidden rounded-[20px] bg-[#000000] p-5 opacity-90 sm:p-8">
+                <h2 className="mb-4 text-center text-2xl afacad-bold sm:text-[25px]">Send us a message</h2>
                 <form className="flex flex-col gap-4" ref={form} onSubmit={sendEmail}>
-                    <div className="flex flex-row gap-4">
+                    <div className="flex flex-col gap-4 md:flex-row">
                         <input type="text" required placeholder="Your Name" name="user_name" className="p-3 rounded-[10px] bg-[#1f0130] text-white focus:outline-none w-full" />
                         <input type="email" required placeholder="Your Email" name="user_email" className="p-3 rounded-[10px] bg-[#1f0130] text-white focus:outline-none w-full"/>
                         <input type="text" required placeholder="Subject" name="user_subject" className="p-3 rounded-[10px] bg-[#1f0130] text-white focus:outline-none w-full"/>
                     </div>
-                    <textarea name="message" required placeholder="Your Message" className="p-3 rounded-[10px] bg-[#1f0130] text-white focus:outline-none" rows={10}></textarea>
-                    <button type="submit" className="bg-[#ae00ff] text-white py-3 rounded-[10px] hover:bg-[#8a00cc] transition-colors">
+                    <textarea name="message" required placeholder="Your Message" className="min-h-55 p-3 rounded-[10px] bg-[#1f0130] text-white focus:outline-none" rows={8}></textarea>
+                    <button type="submit" className="w-full rounded-[10px] bg-[#ae00ff] py-3 text-white transition-colors hover:bg-[#8a00cc] sm:w-auto sm:px-10 sm:self-end">
                         Send Message
                     </button>
                 </form>

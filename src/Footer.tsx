@@ -2,7 +2,7 @@ import logo from "./assets/Logo.png";
 
 const Footer = () => {
   return (
-    <footer className='w-full bg-black text-white text-sm almarai-regular'>
+    <footer className='w-full bg-[#08060b] text-white text-sm almarai-regular'>
       <div className='mx-auto max-w-7xl px-6 py-10 sm:px-8 sm:py-12 lg:px-12'>
         <div className='flex flex-col gap-10 lg:flex-row lg:items-start lg:justify-between'>
           <div className='max-w-md'>

@@ -106,7 +106,7 @@ const Projects = () => {
                 href={project.projectUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="relative mx-auto w-full max-w-90 overflow-hidden rounded-br-[20px] rounded-bl-[20px] rounded-tr-[15px] rounded-tl-[15px] bg-[#000000]"
+                className="relative mx-auto w-full max-w-90 overflow-hidden rounded-br-[20px] rounded-bl-[20px] rounded-tr-[15px] rounded-tl-[15px] bg-[#08060b]"
                 variants={itemVariants}
                 whileHover={{ y: -8, scale: 1.02 }}
                 transition={{ type: "spring", stiffness: 280, damping: 22 }}

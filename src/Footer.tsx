@@ -28,13 +28,13 @@ const Footer = () => {
 
           <div className='grid grid-cols-1 gap-4 text-base sm:grid-cols-2 sm:gap-8 lg:pt-2'>
             <div className='flex flex-col gap-3'>
-              <a href="#" className='transition hover:text-gray-400'>Home</a>
-              <a href="#" className='transition hover:text-gray-400'>Services</a>
-              <a href="#" className='transition hover:text-gray-400'>Projects</a>
+              <a href="#home" className='transition hover:text-gray-400'>Home</a>
+              <a href="#services" className='transition hover:text-gray-400'>Services</a>
+              <a href="#projects" className='transition hover:text-gray-400'>Projects</a>
             </div>
             <div className='flex flex-col gap-3'>
-              <a href="#" className='transition hover:text-gray-400'>Clients</a>
-              <a href="#" className='transition hover:text-gray-400'>Contact Us</a>
+              <a href="#clients" className='transition hover:text-gray-400'>Clients</a>
+              <a href="#contact" className='transition hover:text-gray-400'>Contact Us</a>
             </div>
           </div>
         </div>

@@ -56,7 +56,14 @@ const Hero = () => {
           </motion.p>
 
           {/* Stats section */}
-          <div className="relative w-full py-10 sm:py-10 md:py-16 lg:py-20 afacad-bold">
+          <motion.div
+            className="relative w-full py-10 sm:py-10 md:py-16 lg:py-20 afacad-bold"
+            initial={{ opacity: 0, y:0 }} 
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 1.6, duration: 2, ease: "easeInOut" }}
+          >
+
+          {/* <div className="relative w-full py-10 sm:py-10 md:py-16 lg:py-20 afacad-bold"> */}
             <div className="max-w-6xl mx-auto px-5 sm:px-5 lg:px-22">
               
                 <div className="grid grid-cols-3 md:grid-cols-3 gap-6 sm:gap-6 lg:gap-8 text-white items-center">
@@ -88,7 +95,7 @@ const Hero = () => {
                 </div>
                 </div>
             </div>
-          </div>
+          </motion.div>
         </div>
     </div>
     

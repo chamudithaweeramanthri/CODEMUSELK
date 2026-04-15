@@ -80,7 +80,7 @@ const Projects = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.5 }}
-            transition={{ duration: 0.6, ease: [0.2, 0.65, 0.3, 0.9] }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
           >
             Our Work
           </motion.h2>
@@ -89,7 +89,7 @@ const Projects = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.4 }}
-            transition={{ duration: 0.6, delay: 0.08, ease: [0.2, 0.65, 0.3, 0.9] }}
+            transition={{ duration: 0.6, delay: 0.08, ease: "easeOut" }}
           >
             A showcase of our recent projects, demonstrating our expertise in crafting innovative digital solutions that drive results.
           </motion.p>

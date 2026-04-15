@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { motion, type Variants } from "framer-motion";
 
 const Projects = () => {
       interface Project {
@@ -47,7 +47,7 @@ const Projects = () => {
     ];
 
 
-    const containerVariants = {
+    const containerVariants: Variants = {
       hidden: { opacity: 0 },
       show: {
         opacity: 1,
@@ -58,14 +58,14 @@ const Projects = () => {
       },
     };
 
-    const itemVariants = {
+    const itemVariants: Variants = {
       hidden: { opacity: 0, y: 24 },
       show: {
         opacity: 1,
         y: 0,
         transition: {
           duration: 0.55,
-          ease: [0.2, 0.65, 0.3, 0.9],
+          ease: "easeOut",
         },
       },
     };

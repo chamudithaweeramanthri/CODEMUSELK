@@ -72,7 +72,7 @@ const ContactUs = () => {
                 Contact Us
             </motion.h2>
             <motion.p
-                className="mb-10 max-w-3xl text-base almarai-regular sm:mb-12 sm:text-lg lg:text-2xl"
+                className="mb-12 mt-4 max-w-3xl text-base almarai-regular sm:mb-12 sm:text-lg lg:text-2xl"
                 variants={fadeUp}
                 initial="hidden"
                 whileInView="show"

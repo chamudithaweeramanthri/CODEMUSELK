@@ -1,4 +1,7 @@
 import { motion, type Variants } from "framer-motion";
+import ChapterNest from "./assets/Projects/ChapterNest.png";
+import Odyssey from "./assets/Projects/Odyssey.png";
+import RegionalBoard from "./assets/Projects/RegionalBoard.png";
 
 const Projects = () => {
       interface Project {
@@ -14,36 +17,37 @@ const Projects = () => {
     const projects: Project[] = [
         {
             id: 1,
-            name: "Project Alpha",
-            description: "A web application for managing tasks and deadlines.",
-            imageUrl: "https://images.pexels.com/photos/31343632/pexels-photo-31343632.jpeg",
-            projectUrl: "https://example.com/project-alpha",
+            name: "Chapter Nest",
+            description: "A modern landing page for a hotel, featuring a clean & Minimal design.",
+            imageUrl: ChapterNest,
+            projectUrl: "https://chapter-nest-reviews.vercel.app/",
             tags: ["React", "TypeScript", "Tailwind CSS"],
         }, 
         {
             id: 2,
-            name: "Project Beta",  
-            description: "An e-commerce platform for handmade crafts.",
-            imageUrl: "https://images.pexels.com/photos/10816120/pexels-photo-10816120.jpeg",
-            projectUrl: "https://example.com/project-beta",
+            name: "Odyssey",
+            //personalized travel planning platform landing page with AI-driven recommendations and seamless booking integration.  
+            description: "A personalized travel planning platform landing page.",
+            imageUrl: Odyssey,
+            projectUrl: "https://odyssey-landing-page-psi.vercel.app/",
             tags: ["Next.js", "GraphQL", "Styled Components"],
         },
         {
             id: 3,
-            name: "Project Gamma",
-            description: "Marketing site with dynamic content blocks.",
-            imageUrl: "https://images.pexels.com/photos/14553730/pexels-photo-14553730.jpeg",
-            projectUrl: "https://example.com/project-gamma",
+            name: "Youth Club",
+            description: "A web page for a youth club, showcasing their activities and events.",
+            imageUrl: RegionalBoard,
+            projectUrl: "https://regional-board-of-youth-clubs-sri-j-nine.vercel.app/",
             tags: ["Vite", "React", "ShadCN"],
         },
-        {
-            id: 4,
-            name: "Project Delta",
-            description: "Analytics dashboard with charts and filters.",
-            imageUrl: "https://images.pexels.com/photos/4164418/pexels-photo-4164418.jpeg",
-            projectUrl: "https://example.com/project-delta",
-            tags: ["Recharts", "Radix", "Tailwind"],
-        },
+        // {
+        //     id: 4,
+        //     name: "Project Delta",
+        //     description: "Analytics dashboard with charts and filters.",
+        //     imageUrl: "https://images.pexels.com/photos/4164418/pexels-photo-4164418.jpeg",
+        //     projectUrl: "https://example.com/project-delta",
+        //     tags: ["Recharts", "Radix", "Tailwind"],
+        // },
     ];
 
 
@@ -94,7 +98,7 @@ const Projects = () => {
             A showcase of our recent projects, demonstrating our expertise in crafting innovative digital solutions that drive results.
           </motion.p>
           <motion.div
-            className="grid w-full grid-cols-1 gap-5 sm:grid-cols-2 sm:gap-6 xl:grid-cols-4 xl:gap-7"
+            className="flex w-full flex-wrap justify-center gap-5 sm:gap-6 xl:gap-7"
             variants={containerVariants}
             initial="hidden"
             whileInView="show"
@@ -106,7 +110,7 @@ const Projects = () => {
                 href={project.projectUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="relative mx-auto w-full max-w-90 overflow-hidden rounded-br-[20px] rounded-bl-[20px] rounded-tr-[15px] rounded-tl-[15px] bg-[#08060b]"
+                className="relative w-full max-w-90 flex-none overflow-hidden rounded-br-[20px] rounded-bl-[20px] rounded-tr-[15px] rounded-tl-[15px] bg-[#08060b]"
                 variants={itemVariants}
                 whileHover={{ y: -8, scale: 1.02 }}
                 transition={{ type: "spring", stiffness: 280, damping: 22 }}

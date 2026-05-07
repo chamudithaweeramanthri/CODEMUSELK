@@ -30,7 +30,7 @@ const Projects = () => {
             description: "A personalized travel planning platform landing page.",
             imageUrl: Odyssey,
             projectUrl: "https://odyssey-landing-page-psi.vercel.app/",
-            tags: ["Next.js", "GraphQL", "Styled Components"],
+            tags: ["React", "TypeScript", "Tailwind CSS"],
         },
         {
             id: 3,
@@ -38,7 +38,7 @@ const Projects = () => {
             description: "A web page for a youth club, showcasing their activities and events.",
             imageUrl: RegionalBoard,
             projectUrl: "https://regional-board-of-youth-clubs-sri-j-nine.vercel.app/",
-            tags: ["Vite", "React", "ShadCN"],
+            tags: ["React", "mongoDB", "Tailwind CSS"],
         },
         // {
         //     id: 4,

@@ -14,13 +14,13 @@ const Footer = () => {
             </p>
 
             <div className='mt-5 flex items-center gap-4'>
-              <a href="https://www.linkedin.com/company/codemuselk#" target="_blank" className='transition hover:opacity-80'>
+              <a href="https://www.linkedin.com/company/codemuselk" target="_blank" className='transition hover:opacity-80'>
                 <img src="https://img.icons8.com/?size=100&id=13930&format=png&color=000000" alt="LinkedIn" className='h-8 w-8' />
               </a>
               <a href="#" className='transition hover:opacity-80'>
                 <img src="https://img.icons8.com/?size=100&id=uLWV5A9vXIPu&format=png&color=000000" alt="Facebook" className='h-8 w-8' />
               </a>
-              <a href="#" className='transition hover:opacity-80'>
+              <a href="https://www.instagram.com/codemuse_lk" className='transition hover:opacity-80'>
                 <img src="https://img.icons8.com/?size=100&id=ZRiAFreol5mE&format=png&color=000000" alt="Instagram" className='h-8 w-8' />
               </a>
             </div>

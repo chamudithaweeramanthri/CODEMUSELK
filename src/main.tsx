@@ -8,6 +8,7 @@ import Projects from './Projects'
 import Services from './Services'
 import Contactus from './ContactUs'
 import Footer from './Footer'
+import { Analytics } from "@vercel/analytics/react"
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
@@ -18,6 +19,7 @@ createRoot(document.getElementById('root')!).render(
       <Projects />
       <Contactus />
       <Footer />
+      <Analytics />
     </BrowserRouter>
   </StrictMode>,
 )

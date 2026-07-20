@@ -125,13 +125,13 @@ const Projects = () => {
                 <div className="flex flex-col p-3 sm:p-4">
                   <h3 className="mb-1 text-left text-lg font-bold sm:text-xl">{project.name}</h3>
                   <p className="text-left text-sm leading-relaxed almarai-regular sm:text-[15px]">{project.description}</p>
-                  <div className="mt-3 flex flex-wrap gap-2">
+                  {/* <div className="mt-3 flex flex-wrap gap-2">
                     {project.tags.map((tag, index) => (
                       <span key={index} className="rounded-[5px] bg-[#1ab165] px-2 py-1 text-xs text-white">
                         {tag}
                       </span>
                     ))}
-                  </div>
+                  </div> */}
                 </div>
               </motion.a>
             ))}

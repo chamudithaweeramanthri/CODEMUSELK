@@ -1,4 +1,6 @@
-import { useRef } from 'react'
+import { useRef, useState } from 'react'
+import { useLocation, useNavigate } from 'react-router-dom'
+import type { ContactDraft } from './ErrorPage'
 import emailjs from '@emailjs/browser';
 import { motion } from 'framer-motion';
 
@@ -22,38 +24,45 @@ const staggerContainer = {
 };
 
 const ContactUs = () => {
-    // import all api keys from .env file
-    const ServiceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
-    const TemplateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
-    const PublicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+    const ServiceId = import.meta.env.VITE_EMAILJS_SERVICE_ID?.trim();
+    const TemplateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID?.trim();
+    const PublicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY?.trim();
 
 
     const form = useRef<HTMLFormElement>(null);
+    const inFlight = useRef(false);
+    const [sending, setSending] = useState(false);
+    const [sent, setSent] = useState(false);
+    const navigate = useNavigate();
+    const location = useLocation();
+    const draft = location.state?.draft as ContactDraft | undefined;
 
-    const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
+    const sendEmail = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-
+        if (!form.current || inFlight.current) return;
+        const data = new FormData(form.current);
+        const currentDraft: ContactDraft = {
+            user_name: String(data.get('user_name') || ''),
+            user_email: String(data.get('user_email') || ''),
+            user_subject: String(data.get('user_subject') || ''),
+            message: String(data.get('message') || ''),
+        };
+        setSent(false);
         if (!ServiceId || !TemplateId || !PublicKey) {
-            alert("Email service is not configured. Please check your .env values.");
+            navigate('/error', { state: { draft: currentDraft } });
             return;
         }
-
-        if (form.current) {
-            emailjs.sendForm(
-                ServiceId,
-                TemplateId,
-                form.current,
-                {
-                    publicKey: PublicKey,
-                }
-            ).then((result) => {
-                console.log(result.text);
-                alert("Message sent successfully!");
-                form.current?.reset();
-            }).catch((error) => {
-                console.error(error);
-                alert("Failed to send message.");
-            });
+        inFlight.current = true;
+        setSending(true);
+        try {
+            await emailjs.sendForm(ServiceId, TemplateId, form.current, { publicKey: PublicKey });
+            navigate({ pathname: '/', hash: '#contact' }, { replace: true, state: null });
+            setSent(true);
+        } catch {
+            navigate('/error', { state: { draft: currentDraft } });
+        } finally {
+            inFlight.current = false;
+            setSending(false);
         }
     };
 
@@ -131,16 +140,17 @@ const ContactUs = () => {
                 transition={{ duration: 0.65, delay: 0.12 }}
             >
                 <h2 className="mb-4 text-center text-2xl afacad-bold sm:text-[25px]">Send us a message</h2>
-                <form className="flex flex-col gap-4" ref={form} onSubmit={sendEmail}>
+                <form key={location.key} aria-busy={sending} className="flex flex-col gap-4" ref={form} onSubmit={sendEmail}>
                     <div className="flex flex-col gap-4 md:flex-row">
-                        <input type="text" required placeholder="Your Name" name="user_name" className="p-3 rounded-[10px] bg-[#1f0130] text-white focus:outline-none w-full" />
-                        <input type="email" required placeholder="Your Email" name="user_email" className="p-3 rounded-[10px] bg-[#1f0130] text-white focus:outline-none w-full"/>
-                        <input type="text" required placeholder="Subject" name="user_subject" className="p-3 rounded-[10px] bg-[#1f0130] text-white focus:outline-none w-full"/>
+                        <input type="text" required placeholder="Your Name" name="user_name" defaultValue={draft?.user_name} disabled={sending} aria-label="name" className="p-3 rounded-[10px] bg-[#1f0130] text-white focus:outline-none w-full" />
+                        <input type="email" required placeholder="Your Email" name="user_email" defaultValue={draft?.user_email} disabled={sending} aria-label="email" className="p-3 rounded-[10px] bg-[#1f0130] text-white focus:outline-none w-full"/>
+                        <input type="text" required placeholder="Subject" name="user_subject" defaultValue={draft?.user_subject} disabled={sending} aria-label="subject" className="p-3 rounded-[10px] bg-[#1f0130] text-white focus:outline-none w-full"/>
                     </div>
-                    <textarea name="message" required placeholder="Your Message" className="min-h-55 p-3 rounded-[10px] bg-[#1f0130] text-white focus:outline-none" rows={8}></textarea>
-                                        <motion.button whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.98 }} type="submit" className="w-full rounded-[10px] bg-[#ae00ff] py-3 text-white transition-colors hover:bg-[#8a00cc] sm:w-auto sm:px-10 sm:self-end">
-                        Send Message
+                    <textarea name="message" defaultValue={draft?.message} disabled={sending} aria-label="message" required placeholder="Your Message" className="min-h-55 p-3 rounded-[10px] bg-[#1f0130] text-white focus:outline-none" rows={8}></textarea>
+                                        <motion.button whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.98 }} type="submit" disabled={sending} className="disabled:cursor-wait disabled:opacity-60 w-full rounded-[10px] bg-[#ae00ff] py-3 text-white transition-colors hover:bg-[#8a00cc] sm:w-auto sm:px-10 sm:self-end">
+                        {sending ? 'Sending…' : 'Send Message'}
                                         </motion.button>
+                    {sent && <p role="status" className="text-sm text-green-300">Message sent successfully. We will be in touch soon.</p>}
                 </form>
                         </motion.div>
           </div>
@@ -151,3 +161,4 @@ const ContactUs = () => {
 }
 
 export default ContactUs
+

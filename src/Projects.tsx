@@ -79,7 +79,8 @@ const Projects = () => {
       <div id="projects" className="relative min-h-screen w-full bg-[#1f0130] overflow-hidden scroll-mt-24 py-16 sm:py-20 lg:py-24">
         <div className="absolute inset-0 h-full w-full bg-linear-to-b from-[#ae00ff] opacity-30"></div>
         <div className="relative z-10 mx-auto flex w-full max-w-7xl flex-col items-center px-4 text-center text-white sm:px-6 lg:px-8">
-          <motion.h2
+          <p className="mb-3 text-sm uppercase tracking-[0.2em] text-purple-300 abeezee-regular">Demo Corner</p>
+          <motion.h1
             className="text-4xl afacad-bold sm:text-5xl lg:text-6xl"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -87,7 +88,7 @@ const Projects = () => {
             transition={{ duration: 0.6, ease: "easeOut" }}
           >
             Our Work
-          </motion.h2>
+          </motion.h1>
           <motion.p
             className="mb-8 mt-2 max-w-4xl text-base leading-relaxed almarai-regular sm:mb-12 sm:text-lg lg:text-2xl"
             initial={{ opacity: 0, y: 20 }}

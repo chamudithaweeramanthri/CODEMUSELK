@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import logo from "./assets/Logo.png";
 
 const Footer = () => {
@@ -28,13 +29,14 @@ const Footer = () => {
 
           <div className='grid grid-cols-1 gap-4 text-base sm:grid-cols-2 sm:gap-8 lg:pt-2'>
             <div className='flex flex-col gap-3'>
-              <a href="#home" className='transition hover:text-gray-400'>Home</a>
-              <a href="#services" className='transition hover:text-gray-400'>Services</a>
-              <a href="#projects" className='transition hover:text-gray-400'>Projects</a>
+              <Link to="/#home" className='transition hover:text-gray-400'>Home</Link>
+              <Link to="/#services" className='transition hover:text-gray-400'>Services</Link>
+              <Link to="/demos" className='transition hover:text-gray-400'>Demo Corner</Link>
             </div>
             <div className='flex flex-col gap-3'>
-              <a href="#clients" className='transition hover:text-gray-400'>Clients</a>
-              <a href="#contact" className='transition hover:text-gray-400'>Contact Us</a>
+              <Link to="/reviews" className="transition hover:text-gray-400">Reviews</Link>
+              <Link to="/#clients" className='transition hover:text-gray-400'>Trusted By</Link>
+              <Link to="/#contact" className='transition hover:text-gray-400'>Contact Us</Link>
             </div>
           </div>
         </div>

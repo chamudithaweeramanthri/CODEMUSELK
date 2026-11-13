@@ -1,37 +1,39 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import logo from "./assets/Logo.png";
 
 const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navItems = [
-    { href: "#home", label: "Home" },
-    { href: "#services", label: "Services" },
-    { href: "#projects", label: "Projects" },
-    { href: "#contact", label: "Contact Us" },
+    { href: "/#home", label: "Home" },
+    { href: "/#services", label: "Services" },
+    { href: "/demos", label: "Demo Corner" },
+    { href: "/reviews", label: "Reviews" },
+    { href: "/#contact", label: "Contact Us" },
   ];
 
   return (
-    <nav className="fixed top-0 z-20 w-full abeezee-regular backdrop-blur-[7px]">
+    <nav className="fixed top-0 z-20 w-full abeezee-regular bg-[#160322]/85 backdrop-blur-[7px]">
       <div className="mx-auto flex w-full max-w-7xl items-center justify-between px-4 py-4 sm:px-6 md:px-10 lg:px-16 xl:px-20">
       {/* Logo */}
       <div>
-        <a href="#home">
+        <Link to="/#home" onClick={() => setIsMenuOpen(false)}>
           <img
             src={logo}
             alt="CODEMUSE Logo"
             className="h-9 w-36 sm:h-10 sm:w-40 md:h-11 md:w-44 lg:h-12 lg:w-48"
           />
-        </a>
+        </Link>
       </div>
 
       {/* Desktop / Tablet Menu (md and up) */}
-      <ul className="hidden items-center gap-6 text-[16px] text-white md:flex lg:gap-8 lg:text-[18px]">
+      <ul className="hidden items-center gap-4 text-[14px] text-white md:flex lg:gap-6 lg:text-[16px]">
         {navItems.map((item) => (
           <li key={item.href}>
-            <a href={item.href} className="cursor-pointer transition hover:text-gray-300">
+            <Link to={item.href} className="cursor-pointer transition hover:text-gray-300">
               {item.label}
-            </a>
+            </Link>
           </li>
         ))}
       </ul>
@@ -62,13 +64,13 @@ const Navbar: React.FC = () => {
           <ul className="flex flex-col gap-4 text-[16px] text-white">
             {navItems.map((item) => (
               <li key={item.href}>
-                <a
-                  href={item.href}
+                <Link
+                  to={item.href}
                   className="block cursor-pointer transition hover:text-gray-300"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.label}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
